@@ -1,0 +1,108 @@
+.destaques-parceiros {
+  width: min(100% - 4rem, 1280px);
+  margin: 88px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.banner-parceiro {
+  position: relative;
+  min-height: 350px;
+  padding: 114px 40px 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 20px;
+  color: var(--cor-branca);
+  background: #191714;
+  text-decoration: none;
+  isolation: isolate;
+}
+
+.banner-parceiro::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: '';
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 85.04%);
+}
+
+.banner-parceiro__imagem {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-parceiro__texto {
+  position: relative;
+  z-index: 1;
+  max-width: 216.49px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner-parceiro__texto strong {
+  width: 216.49px;
+  min-height: 60px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.banner-parceiro__texto > span:not(.botao-amarelo) {
+  margin-bottom: 32px;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.banner-parceiro__texto .botao-amarelo {
+  width: 144.69px;
+  height: 48px;
+  min-width: 144.69px;
+  min-height: 48px;
+  border-radius: 6px;
+  color: var(--cor-escura);
+  background: #F7CA11;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 672px) {
+  .destaques-parceiros {
+    width: calc(100% - 2rem);
+  }
+
+  .banner-parceiro {
+    min-height: 260px;
+    padding: 48px 24px 24px;
+  }
+
+  .banner-parceiro__texto strong {
+    font-size: 30px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .destaques-parceiros {
+    grid-template-columns: 1fr;
+  }
+}

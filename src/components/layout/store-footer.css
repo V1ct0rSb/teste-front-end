@@ -1,0 +1,261 @@
+.rodape {
+  width: 100%;
+  margin-top: 90px;
+  background: var(--cor-cinza-claro);
+}
+
+.newsletter {
+  width: 100%;
+  min-height: 162px;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--cor-branca);
+  background: #271C47;
+}
+
+.newsletter__conteudo {
+  width: min(100% - 4rem, 1280px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.newsletter__texto {
+  max-width: 515px;
+}
+
+.newsletter h2 {
+  margin: 0 0 8px;
+  color: var(--cor-branca);
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.newsletter p {
+  margin: 0;
+  color: var(--cor-branca);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.formulario-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formulario-newsletter__campos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formulario-newsletter__campos > input {
+  width: 233px;
+  height: 42px;
+  padding: 12px 24px;
+  border: 1px solid #E7E7E7;
+  border-radius: 8px;
+  color: var(--cor-texto);
+  background: var(--cor-branca);
+  font-family: 'Work Sans', 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.formulario-newsletter__campos > input::placeholder {
+  color: #676767;
+}
+
+.formulario-newsletter__campos .botao-amarelo {
+  width: 157px;
+  height: 42px;
+  min-width: 157px;
+  min-height: 42px;
+  padding: 15px 40px;
+  gap: 10px;
+  border-radius: 8px;
+  color: #161615;
+  background: #F7CA11;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.aceite-termos {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cor-branca);
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.aceite-termos input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--cor-destaque);
+}
+
+.newsletter .newsletter__mensagem {
+  width: min(100% - 4rem, 1280px);
+  margin: 12px auto 0;
+  color: var(--cor-destaque);
+  font-size: 12px;
+}
+
+.rodape__principal {
+  width: 100%;
+  background: var(--cor-cinza-claro);
+}
+
+.rodape__conteudo {
+  width: min(100% - 4rem, 1280px);
+  min-height: 282px;
+  margin: 0 auto;
+  padding: 42px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.65fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.rodape__marca {
+  padding: 20px 90px 20px 0;
+  border-right: 1px solid #28282824;
+}
+
+.rodape__marca > a img {
+  width: 164px;
+  height: auto;
+  object-fit: contain;
+}
+
+.rodape__marca p {
+  max-width: 354px;
+  margin: 18px 0 27px;
+  color: var(--cor-texto);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.rodape__redes {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.rodape__redes img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.rodape__redes a {
+  text-decoration: none;
+}
+
+.rodape__links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.rodape__links div {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rodape__links h3 {
+  margin: 0 0 8px;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.rodape__links a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.rodape__links a:hover {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+.rodape__assinatura {
+  width: 100%;
+  padding: 22px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  color: var(--cor-texto);
+  background: var(--cor-branca);
+  border-top: 1px solid #DEDEDE;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .newsletter__conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formulario-newsletter,
+  .formulario-newsletter__campos {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .rodape__conteudo {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .rodape__marca {
+    padding: 0 0 32px;
+    border-right: 0;
+    border-bottom: 1px solid #28282824;
+  }
+}
+
+@media (max-width: 672px) {
+  .newsletter__conteudo,
+  .rodape__conteudo {
+    width: calc(100% - 2rem);
+  }
+
+  .formulario-newsletter__campos > input,
+  .formulario-newsletter__campos .botao-amarelo {
+    width: 100%;
+  }
+
+  .rodape__links {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

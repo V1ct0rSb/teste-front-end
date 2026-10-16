@@ -1,0 +1,62 @@
+.marcas {
+  width: min(100% - 4rem, 1280px);
+  margin: 88px auto 0;
+}
+
+.marcas h2 {
+  margin-bottom: 40px;
+}
+
+.marcas__lista {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.marca {
+  width: 100%;
+  max-width: 211px;
+  aspect-ratio: 1;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--cor-branca);
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.13);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.marca:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.marca img {
+  width: 117px;
+  max-width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .marcas__lista {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 672px) {
+  .marcas {
+    width: calc(100% - 2rem);
+  }
+
+  .marcas h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 448px) {
+  .marcas__lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

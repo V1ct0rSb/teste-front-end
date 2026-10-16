@@ -2,6 +2,12 @@ import logo from '../../assets/Logo.png'
 import creditCardIcon from '../../assets/CreditCard.png'
 import shieldCheckIcon from '../../assets/ShieldCheck.png'
 import truckIcon from '../../assets/Truck.png'
+import ordersIcon from '../../assets/Group.png'
+import favoritesIcon from '../../assets/Heart.png'
+import accountIcon from '../../assets/UserCircle.png'
+import cartIcon from '../../assets/ShoppingCart.png'
+import subscriptionIcon from '../../assets/CrownSimple.png'
+import searchIcon from '../../assets/MagnifyingGlass.png'
 import './store-header.css'
 
 interface StoreHeaderProps {
@@ -48,19 +54,24 @@ export function StoreHeader({ cartCount, search, onSearchChange }: StoreHeaderPr
             onChange={(event) => onSearchChange(event.target.value)}
             placeholder="O que você está buscando?"
           />
+          <img className="busca__icone" src={searchIcon} alt="" aria-hidden="true" />
         </label>
         <div className="cabecalho__acoes">
           <button type="button" aria-label="Pedidos">
+            <img className="icone" src={ordersIcon} alt="" aria-hidden="true" />
           </button>
           <button type="button" aria-label="Favoritos">
+            <img className="icone" src={favoritesIcon} alt="" aria-hidden="true" />
           </button>
           <button type="button" aria-label="Minha conta">
+            <img className="icone" src={accountIcon} alt="" aria-hidden="true" />
           </button>
           <button
             type="button"
             className="acao-carrinho"
             aria-label={`Carrinho com ${cartCount} ${cartCount === 1 ? 'item' : 'itens'}`}
           >
+            <img className="icone" src={cartIcon} alt="" aria-hidden="true" />
             {cartCount > 0 && <span className="contador-carrinho">{cartCount}</span>}
           </button>
         </div>
@@ -73,6 +84,9 @@ export function StoreHeader({ cartCount, search, onSearchChange }: StoreHeaderPr
             className={categoria === 'Ofertas do dia' ? 'menu-principal__destaque' : ''}
             href="#produtos"
           >
+            {categoria === 'Assinatura' && (
+              <img className="icone" src={subscriptionIcon} alt="" aria-hidden="true" />
+            )}
             {categoria}
           </a>
         ))}

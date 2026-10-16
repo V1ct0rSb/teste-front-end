@@ -84,10 +84,11 @@
   color: var(--cor-texto-apoio);
 }
 
-.busca .icone {
-  width: 28px;
-  height: 28px;
-  color: var(--cor-texto-apoio);
+.busca__icone {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  object-fit: contain;
 }
 
 .cabecalho__acoes {
@@ -117,6 +118,7 @@
 .cabecalho__acoes .icone {
   width: 28px;
   height: 28px;
+  object-fit: contain;
 }
 
 .contador-carrinho {
@@ -164,6 +166,7 @@
 .menu-principal a .icone {
   width: 20px;
   height: 20px;
+  object-fit: contain;
 }
 
 .menu-principal a:hover,
